@@ -93,5 +93,5 @@ spec:
         emptyDir: {}
       - name: nginx-config-pvc
         hostPath:
-          path: /users/khchow/social-network-deploy/assets/
+          path: /users/Dingjie/DeepAtlas/social-network/social-network-deploy/assets/
         
