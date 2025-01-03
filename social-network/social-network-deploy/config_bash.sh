@@ -21,7 +21,7 @@ EOF
 
 # config_docker_daemon
 configure_inputrc
-bind -f /root/.inputrc
+# bind -f /root/.inputrc
 configure_bashrc
-source /root/.bashrc
-source /etc/bash_completion
+#source /root/.bashrc
+#source /etc/bash_completion
