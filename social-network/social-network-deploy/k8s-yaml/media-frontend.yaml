@@ -88,4 +88,4 @@ spec:
         emptyDir: {}
       - name: media-config-pvc
         hostPath:
-          path: /users/khchow/social-network-deploy/assets/
+          path: /users/Dingjie/DeepAtlas/social-network/social-network-deploy/assets/
