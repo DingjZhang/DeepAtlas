@@ -32,7 +32,7 @@ microk8s enable istio
 1. Install OpenEBS
 
 ```
- microk8s kubectl apply -f openebs-operator.yaml && watch  microk8s kubectl get pod -n openebs
+microk8s kubectl apply -f openebs-operator.yaml && watch  microk8s kubectl get pod -n openebs
 ```
 
 2. Make sure the block device is recognized, unclaimed, and active
@@ -69,7 +69,7 @@ spec:
 4. Apply the YAML file
 
 ```
- microk8s kubectl apply -f spc.yaml && watch  microk8s kubectl -n openebs get pods
+microk8s kubectl apply -f spc.yaml && watch  microk8s kubectl -n openebs get pods
 ```
 
 5. Make sure the disk pool is healthy:
@@ -95,7 +95,7 @@ microk8s kubectl apply -f k8s-yaml/init/ && watch  microk8s kubectl get pods -n 
 2. Apply social-network stack YAMLs
 
 ```
- microk8s kubectl apply -f k8s-yaml/ && watch  microk8s kubectl get pods -n social-network
+microk8s kubectl apply -f k8s-yaml/ && watch  microk8s kubectl get pods -n social-network
 ```
 
 ## Installation: Telemetry Tools
@@ -124,7 +124,7 @@ microk8s kubectl apply -f tracing/00-elasticsearch-pvc.yaml
 microk8s kubectl apply -f tracing/01-elasticsearch.yaml
 ```
 ```
-microk8s kubectl apply -f tracing/02-cert-manager.yaml
+microk8s kubectl apply -f tracing/02-cert-manager.yaml && watch microk8s kubectl get pods -n cert-manager
 ```
 ```
 microk8s kubectl apply -f tracing/03-jaeger-operator.yaml
@@ -147,5 +147,5 @@ export TCP_INGRESS_PORT=$(microk8s kubectl -n istio-system get service istio-ing
 export INGRESS_HOST=$(microk8s kubectl get po -l istio=ingressgateway -n istio-system -o jsonpath='{.items[0].status.hostIP}')
 ```
 ```
-microk8s kubectl apply -f gateway.yaml
+microk8s kubectl apply -f k8s-yaml/gateway.yaml
 ```
