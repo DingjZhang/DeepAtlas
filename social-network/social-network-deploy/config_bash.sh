@@ -1,6 +1,6 @@
 configure_inputrc ()
 {
-sudo tee /root/.inputrc <<EOF
+tee /root/.inputrc <<EOF
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 set show-all-if-ambiguous on
@@ -10,7 +10,7 @@ EOF
 
 configure_bashrc ()
 {
-sudo tee /root/.bashrc <<EOF
+tee -a /root/.bashrc <<EOF
 source <(kubectl completion bash)
 alias kubectl='microk8s kubectl'
 alias k=kubectl

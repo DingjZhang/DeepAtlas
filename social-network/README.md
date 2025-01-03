@@ -32,7 +32,7 @@ microk8s enable istio
 1. Install OpenEBS
 
 ```
-sudo microk8s kubectl apply -f openebs-operator.yaml && watch sudo microk8s kubectl get pod -n openebs
+ microk8s kubectl apply -f openebs-operator.yaml && watch  microk8s kubectl get pod -n openebs
 ```
 
 2. Make sure the block device is recognized, unclaimed, and active
@@ -69,7 +69,7 @@ spec:
 4. Apply the YAML file
 
 ```
-sudo microk8s kubectl apply -f spc.yaml && watch sudo microk8s kubectl -n openebs get pods
+ microk8s kubectl apply -f spc.yaml && watch  microk8s kubectl -n openebs get pods
 ```
 
 5. Make sure the disk pool is healthy:
@@ -81,7 +81,7 @@ microk8s kubectl get csp
 6. Create the storage class
 
 ```
-microk8s kubectl apply -f sc.yaml && watch sudo microk8s kubectl -n openebs get sc
+microk8s kubectl apply -f sc.yaml && watch  microk8s kubectl -n openebs get sc
 ```
 
 ## Installation: Social Network
@@ -89,13 +89,13 @@ microk8s kubectl apply -f sc.yaml && watch sudo microk8s kubectl -n openebs get 
 1. Create namespace and PVCs
 
 ```
-microk8s kubectl apply -f k8s-yaml/init/ && watch sudo microk8s kubectl get pods -n openebs
+microk8s kubectl apply -f k8s-yaml/init/ && watch  microk8s kubectl get pods -n openebs
 ```
 
 2. Apply social-network stack YAMLs
 
 ```
-sudo microk8s kubectl apply -f k8s-yaml/ && watch sudo microk8s kubectl get pods -n social-network
+ microk8s kubectl apply -f k8s-yaml/ && watch  microk8s kubectl get pods -n social-network
 ```
 
 ## Installation: Telemetry Tools
@@ -109,7 +109,7 @@ microk8s kubectl create namespace monitoring
 microk8s kubectl apply --server-side -f monitoring/setup
 ```
 ```
-microk8s kubectl apply -f monitoring/ && watch sudo microk8s kubectl get all -n monitoring
+microk8s kubectl apply -f monitoring/ && watch  microk8s kubectl get all -n monitoring
 ```
 ```
 microk8s kubectl apply -f monitoring/openebs-addons
