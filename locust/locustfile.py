@@ -11,8 +11,8 @@ resource.setrlimit(resource.RLIMIT_NOFILE, (250000, 250000))
 ########################################################################################################################
 # Simulation Configuration
 ########################################################################################################################
-GLOBAL_NGINX_FRONTEND_URL
-GLOBAL_MEDIA_FRONTEND_URL
+GLOBAL_NGINX_FRONTEND_URL = 'http://128.105.145.88:31000'
+GLOBAL_MEDIA_FRONTEND_URL = 'http://128.105.145.88:31001'
 
 LOW_DAYS = 3
 HIGH_DAYS = 7
