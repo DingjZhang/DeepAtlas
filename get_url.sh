@@ -13,5 +13,5 @@ echo "nginx-thrift URL: $nginx_thrift_url"
 echo "media-frontend URL: $media_frontend_url"
 
 # 替换locustfile.py中的URL
-sed -i "s|GLOBAL_NGINX_FRONTEND_URL = 'CHANGE_THIS_URL'|GLOBAL_NGINX_FRONTEND_URL = '$nginx_thrift_url'|g" locust/locustfile.py
-sed -i "s|GLOBAL_MEDIA_FRONTEND_URL = 'CHANGE_THIS_URL'|GLOBAL_MEDIA_FRONTEND_URL = '$media_frontend_url'|g" locust/locustfile.py
+sed -i "s|GLOBAL_NGINX_FRONTEND_URL = 'CHANGE_THIS_URL'|GLOBAL_NGINX_FRONTEND_URL = '$nginx_thrift_url'|g" ./locust/locustfile.py
+sed -i "s|GLOBAL_MEDIA_FRONTEND_URL = 'CHANGE_THIS_URL'|GLOBAL_MEDIA_FRONTEND_URL = '$media_frontend_url'|g" ./locust/locustfile.py
