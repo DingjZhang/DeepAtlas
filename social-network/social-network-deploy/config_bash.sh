@@ -23,5 +23,9 @@ EOF
 configure_inputrc
 # bind -f /root/.inputrc
 configure_bashrc
-#source /root/.bashrc
-#source /etc/bash_completion
+
+sleep 3
+
+bind -f /root/.inputrc
+source /root/.bashrc
+source /etc/bash_completion
