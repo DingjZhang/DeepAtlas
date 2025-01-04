@@ -10,6 +10,14 @@ It includes the following two components:
 * `./social-network-deploy/`: the yaml files for deploying the application on the cloud
 * `./social-network-source/`: the source code of the social network
 
+```bash
+sudo su
+```
+
+```bash
+microk8s stop && snap remove microk8s && snap install microk8s --classic --channel=1.25/stable && microk8s status --wait-ready && microk8s enable dns && microk8s enable ingress && microk8s enable community && microk8s enable istio && microk8s kubectl apply -f openebs-operator.yaml && watch microk8s kubectl get pod -n openebs
+```
+
 ## Installation: MicroK8s
 
 1. Install `microk8s` and wait until it is ready
@@ -93,6 +101,10 @@ microk8s kubectl apply -f k8s-yaml/init/ && watch  microk8s kubectl get pods -n 
 ```
 
 2. Apply social-network stack YAMLs
+
+```
+./add_node_label.sh
+```
 
 ```
 microk8s kubectl apply -f k8s-yaml/ && watch  microk8s kubectl get pods -n social-network
