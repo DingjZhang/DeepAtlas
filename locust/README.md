@@ -9,13 +9,16 @@ This section describes how to run the load generator using locust with a distrib
 1. Copy this `locust` folder to the machine where you want to run the client load generator
 2. Create a virtualenv with the provided `requirements.txt`. This makes sure the libraries used in this repository do not interfere with your own programming environment
 ```bash
+sudo apt update && sudo apt install -y python3.8-venv
+```
+```
 python3 -m venv venv
 ```
 ```
 source venv/bin/activate
 ```
 ```
-python3 -m pip install -r requirements
+python3 -m pip install -r requirements.txt
 ```
 3. Run the warmup script to initialize the social network with a real social graph from Facebook. Replace the `XXX` below with the location the nginx-thrift obtained from the `Routes` page in Openshift Console. 
 ```bash
