@@ -142,7 +142,7 @@ microk8s kubectl apply -f tracing/02-cert-manager.yaml && watch microk8s kubectl
 microk8s kubectl apply -f tracing/03-jaeger-operator.yaml
 ```
 ```
-microk8s kubectl apply -f tracing/04-jaeger.yam
+microk8s kubectl apply -f tracing/04-jaeger.yaml
 ```
 3. Configure gateway for Istio
 
