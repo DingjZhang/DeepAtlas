@@ -26,7 +26,7 @@ pymoo
 dash_cytoscape
 packaging
 tqdm
-elasticsearch==7.8.2
+elasticsearch==7.8.0
 ```
 
 # Postprocess Data
