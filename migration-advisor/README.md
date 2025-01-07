@@ -25,10 +25,12 @@ dash
 pymoo
 dash_cytoscape
 packaging
+tqdm
+elasticsearch==7.8.2
 ```
 
 # Postprocess Data
-1. Export traces from Elasticsearch and get the `EXPERIMENT_ID`
+1. Export traces from Elasticsearch and get the `EXPERIMENT_ID` (`ELASTICSEARCH_INDEX==jaeger-span-YYYY-MM-DD`)
 ```bash
 python ./postprocess/01_exporter-jaeger.py [ELASTICSEARCH_HOST] [ELASTICSEARCH_INDEX]
 ```
