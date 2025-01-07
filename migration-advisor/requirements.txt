@@ -7,3 +7,5 @@ dash
 pymoo
 dash_cytoscape
 packaging
+tqdm
+elasticsearch==7.8.0
